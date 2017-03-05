@@ -1,17 +1,26 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var blogPosts = [];
+var blogPosts = [
+	{
+		title: "hello",
+		author: "Ellen",
+		body: "oogie boogie",
+		datetime: new Date()
+	}
+];
 
 var app = express();
 var port = 3000;
-
-app.set('view engine', 'ejs');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
-app.post('/create', function(req, res) {
+app.get('/blogPosts', function(req, res) {
+	res.json(blogPosts);
+});
+
+app.post('/blogPosts', function(req, res) {
 	var newPost = {};
 
 	newPost.title = req.body.title;
@@ -22,12 +31,7 @@ app.post('/create', function(req, res) {
 	blogPosts.push(newPost);
 
 	console.log(blogPosts);
-	res.render('blogPosts', {blogPosts: blogPosts});
-	res.redirect('/');
-});
-
-app.get('/', function(req, res) {
-	res.render('blogPosts', blogPosts);
+	res.json(blogPosts);
 });
 
 app.get('/*', function(req, res) {
