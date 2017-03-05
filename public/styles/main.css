@@ -23,22 +23,36 @@ div.header {
 div.header h1 {
 	font-size: 48pt;
 	padding: 50px;
-	margin: 10px auto;
+	margin: 0 auto;
+	text-align: center;
 }
 
 div.form, .subject {
 	background-color: black;
 	border: 5px solid green;
-	width: 90%;
+	width: 75%;
 	margin: 25px auto;
 	padding: 25px;
 }
 
+textarea {
+	width: 100%;
+	height: auto;
+}
+
+div.blogPosts {
+	background-color: black;
+	width: 95%;
+}
+
+div.newBlogPost {
+	background-color: white;
+	width: 100%;
+}
+
 div.blogPosts, div.newBlogPost {
 	color: black;
-	background-color: white;
 	border: 5px solid green;
-	width: 90%;
 	margin: 5px auto;
 	padding: 25px;
 }

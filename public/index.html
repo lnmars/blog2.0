@@ -11,29 +11,25 @@
 		</h1>
 	</div>
 	<div class="form">
-		<form action="/blogPosts" method="POST">
+		<form>
 			<div>
-				<h3>Name yo' blog:</h3>
-				<input type="text" name="title"/>
+				<h3>Blog Title:</h3>
+				<input type="text" name="title" placeholder="Mr. Bond's Weird Day" />
 			</div>
 			<div>
-				<h3>Name yo'self:</h3>
-				<input type="text" name="author">
+				<h3>Author Name:</h3>
+				<input type="text" name="author" placeholder="Ian Flemming">
 			</div>
 			<div>
-				<h3>Express yo'self:</h3>
-				<textarea name="body"></textarea>
+				<h3>Blog Content:</h3>
+				<textarea rows="4" cols="75" name="body" placeholder="Mr. Bond was struck by the weirdness of his day..."></textarea>
 			</div>
 			<div>
 				<input type="submit" value="Post"/>
 			</div>
 		</form>
 	</div>
-	<div class="blogPosts">
-		<h2>Title</h2>
-		<h3>Author</h3>
-		<p>Body</p>
-	</div>
+	<div class="blogPosts"></div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 </body>

@@ -2,9 +2,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var blogPosts = [
 	{
-		title: "hello",
+		title: "Preliminary Blog Post",
 		author: "Ellen",
-		body: "oogie boogie",
+		body: "Lorem ipsum dolor sit amet...",
 		datetime: new Date()
 	}
 ];
